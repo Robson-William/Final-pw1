@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% set title = "Home" %}
+
+{% block content %}
+	{% for favorito in favoritos %}
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <a href="/favorito">{{ favorito.titulo }}</a>
+            <h5 class="card-title">{{ favorito.categoria }}</h5>
+            <a href="{{ favorito.link }}" class="btn btn-primary">Visite a página</a>
+            <a href="/api/deletefav" class="btn btn-primary">Visite a página</a>
+            <a href="/api/update" class="btn btn-primary">Visite a página</a>
+        </div>
+        </div>
+	{% endfor %}
+{% endblock %}

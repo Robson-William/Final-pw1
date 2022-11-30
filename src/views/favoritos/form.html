@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% set title = ("Editar" if mode === 'update' else "Cadastrar") %}
+
+{% block content %}
+<form action="/api/add" method="POST">
+  <div>
+    <label for="inputTitulo">Titulo: </label>
+    <input type="text"  id="inputTitulo" name="titulo">
+  </div>
+  <div>
+    <label for="inputLink">Link: </label>
+    <input type="text"  id="inputLink" name="link">
+  </div>
+  <div>
+  <select aria-label="Default select example" name="categoria">
+    <option value="educacao" selected>educação</option>
+    <option value="artes">artes</option>
+    <option value="filmes">filmes</option>
+  </select>
+  </div>
+  <div>
+    <button type="submit">Enviar</button>
+  </div>
+</form>
+{% endblock %}
