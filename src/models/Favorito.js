@@ -51,7 +51,7 @@ async function update(dados) {
 
   const db = await connect();
 
-  const { titulo, link, categoria } = dados;
+  const { id, titulo, link, categoria } = dados;
 
   const atualizado = await db.run(sql, [titulo, link, categoria, id]);
 

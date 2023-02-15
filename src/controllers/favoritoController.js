@@ -26,9 +26,9 @@ async function readOne(req, res) {
 }
 
 async function update(req, res) {
-  const { titulo, link, categoria } = req.body;
+  const { id, titulo, link, categoria } = req.body;
 
-  const dados = { titulo, link, categoria };
+  const dados = { id, titulo, link, categoria };
 
   const atualizado = await Favorito.update(dados);
 
